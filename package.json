@@ -1,0 +1,15 @@
+{
+  "name": "meteor-user-ranking-app",
+  "git": "https://github.com/myke11j/meteor-user-ranking-app",
+  "private": true,
+  "author": "Mukul<mukul1904@gmail.com>",
+  "scripts": {
+    "start": "meteor run",
+    "dev": ". ./creds.sh & meteor run",
+    "test": "echo 'Test module not found'"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.20.0",
+    "meteor-node-stubs": "~0.2.4"
+  }
+}
