@@ -1,4 +1,5 @@
-// Server entry point, imports all server code
+/**
+ * @author Mukul
+ */
 
 import '/imports/startup/server';
-import '/imports/startup/both';

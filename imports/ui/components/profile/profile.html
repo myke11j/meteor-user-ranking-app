@@ -1,0 +1,12 @@
+<template name="profile">
+    <div class="profile">
+        <span id="email">Email: {{email}}</span> <br>
+        <span>
+            User's average ratings: <br>
+            {{#each profileRating}}
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+            {{/each}}
+        </span>
+
+    </div>
+</template>

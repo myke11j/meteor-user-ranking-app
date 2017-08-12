@@ -1,0 +1,38 @@
+<template name="listings">
+  <div class="row">
+    {{#if otherUsersExists}}
+      {{#each userList}}
+        {{#if notCurrentUser this._id }}
+        <div class="col-md-4 user-item">
+          <div class="row">
+            <div class="col-md-12">
+              <i class="fa fa-user" aria-hidden="true" style="font-size: 250px;"></i>
+            </div>
+            <div class="col-md-12">
+              <span id="email"><strong>Email</strong>: {{ getAddress this.emails }}</span>
+            </div>
+            <div class="col-md-12">
+              <strong>Rating</strong>: {{> ratingStars rating=this.av_rating }}
+            </div>
+            <div class="col-md-12">
+              <strong>Give Rating</strong>:
+              <select class="rating-select" id='select-{{this._id}}'>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+              <button id='{{this._id}}' class="btn btn-primary submitScore">Submit</button>
+            </div>
+          </div>
+        </div>
+        {{/if}}
+    {{/each}}
+  {{else}}
+      <div class="alert alert-info">
+        <strong>Info!</strong> There are no users right now to rate. Please create more users
+      </div>
+  {{/if}} 
+  </div>
+</template>
