@@ -16,7 +16,7 @@ Meteor.methods({
             const score = user.av_rating;
             const new_num_of_attempt = num_of_attempt + 1;
             console.log(num_of_attempt, score, rating, new_num_of_attempt);
-            let av_rating = Math.floor(((num_of_attempt * score) + rating) / new_num_of_attempt);
+            let av_rating = Math.ceil(((num_of_attempt * score) + rating) / new_num_of_attempt);
             console.log(`New average rating for user ${userId} is ${av_rating}`);
             return Users.update({ _id: userId }, {
                 $set: {
